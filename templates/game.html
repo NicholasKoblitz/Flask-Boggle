@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %} Flask Boggle {% endblock %}
+
+{% block content %}
+
+    <aside id="score-board">
+        
+    </aside>
+
+    <section id="show-result">
+
+    </section>
+
+    <form id="guess-form"  method="post">
+        <input type="text" name="word" id="guess">
+        <button class="btn">Submit</button>
+    </form>
+
+    <button id="play-again" hidden >Play Again?</button>
+
+    <table>
+        <tbody>
+        {% for lst in board %}
+        <tr>
+            {% for tile in lst %}
+            <td> {{tile}} </td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <section id="timer" hidden>
+
+    </section>
+    
+
+{% endblock %}
